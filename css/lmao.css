@@ -40,17 +40,6 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-
-.select {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 16px;
-  color: $select-color;
-  width: $select-width;
-  height: $select-height;
-}
-
 .form button {
   font-family: 'Inter', sans-serif;
   text-transform: uppercase;
