@@ -36,16 +36,17 @@ Before running the project, ensure you have the following:
 
 ## Database Structure
 
-The project assumes a basic database structure with a `students` table. Make sure to adjust the structure based on your requirements.
+The database will make automatic create `calon_siswa` table, database structur like this :
 
 ```sql
-CREATE TABLE students (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    email VARCHAR(100),
-    date_of_birth DATE
-);
+$sqlCreateTable = "CREATE TABLE IF NOT EXISTS calon_siswa (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(30) NOT NULL,
+    alamat VARCHAR(100) NOT NULL,
+    jenis_kelamin VARCHAR(50) NOT NULL,
+    agama VARCHAR(50) NOT NULL,
+    asal_sekolah VARCHAR(100) NOT NULL
+)";
 ```
 
 ## Contributing
