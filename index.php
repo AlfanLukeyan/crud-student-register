@@ -1,34 +1,42 @@
+<!-- Koneksi ke config.php -->
+<?php include("includes/config.php") ?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pendaftaran Siswa Baru | SMK Coding</title>
-    <link rel="stylesheet" href="css/lmao.css" />
-  </head>
-  <body>
-    <div class="login-page">
+
+<head>
+  <?php include("templates/header.php") ?>
+</head>
+
+<body>
+  <div class="login-page">
     <div class="menu">
-    <h1>Pendaftaran Siswa Baru</h1>
-    <h1>SMA Coding</h1>
+      <h1>Pendaftaran Siswa Baru</h1>
+      <h2>SMA Coding</h2>
     </div>
-      <div class="form">
-        <h2>Menu</h2>
-        <a href="form-daftar.php">Daftar Baru</a>
-        <a href="list-siswa.php">Pendaftar</a>
-        <?php if(isset($_GET['status'])): ?>
-            <p>
-                <?php
-                    if($_GET['status'] == 'sukses'){
-                        echo "Pendaftaran siswa baru berhasil!";
-                    } else {
-                        echo "Pendaftaran gagal!";
-                    }
-                ?>
-            </p>
-        <?php endif; ?>
-      </div>
+    <div class="form mt-5">
+      <h2>Menu</h2>
+      <a href="pages/form-daftar.php">Daftar Baru</a>
+      <a href="pages/list-siswa.php">Pendaftar</a>
     </div>
-  </body>
+
+    <?php if (isset($_GET['status'])) : ?>
+      <p>
+        <?php
+        if ($_GET['status'] == 'sukses') {
+          
+          echo '<div class="alert alert-success" role="alert">';
+          echo "Pendaftaran siswa baru berhasil!";
+          echo '</div>';
+        } else {
+          echo '<div class="alert alert-danger" role="alert">';
+          echo "Pendaftaran gagal !!";
+          echo '</div>';
+        }
+        ?>
+      </p>
+    <?php endif; ?>
+  </div>
+</body>
+
 </html>

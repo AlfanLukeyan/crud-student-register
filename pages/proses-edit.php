@@ -1,6 +1,6 @@
 <?php
 
-include("config.php");
+include("../includes/config.php");
 
 // cek apakah tombol simpan sudah diklik atau blum?
 if(isset($_POST['simpan'])){
@@ -11,11 +11,11 @@ if(isset($_POST['simpan'])){
     $alamat = $_POST['alamat'];
     $jk = $_POST['jenis_kelamin'];
     $agama = $_POST['agama'];
-    $sekolah = $_POST['sekolah_asal'];
+    $sekolah = $_POST['asal_sekolah'];
 
     // buat query update
-    $sql = "UPDATE calon_siswa SET nama='$nama', alamat='$alamat', jenis_kelamin='$jk', agama='$agama', sekolah_asal='$sekolah' WHERE id=$id";
-    $query = mysqli_query($db, $sql);
+    $sql = "UPDATE calon_siswa SET nama='$nama', alamat='$alamat', jenis_kelamin='$jk', agama='$agama', asal_sekolah='$sekolah' WHERE id=$id";
+    $query = mysqli_query($conn, $sql);
 
     // apakah query update berhasil?
     if( $query ) {

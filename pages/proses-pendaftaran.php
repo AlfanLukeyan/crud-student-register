@@ -1,6 +1,6 @@
 <?php
 
-include("config.php");
+include("../includes/config.php");
 
 // cek apakah tombol daftar sudah diklik atau blum?
 if(isset($_POST['daftar'])){
@@ -10,19 +10,19 @@ if(isset($_POST['daftar'])){
     $alamat = $_POST['alamat'];
     $jk = $_POST['jenis_kelamin'];
     $agama = $_POST['agama'];
-    $sekolah = $_POST['sekolah_asal'];
+    $sekolah = $_POST['asal_sekolah'];
 
     // buat query
-    $sql = "INSERT INTO calon_siswa (nama, alamat, jenis_kelamin, agama, sekolah_asal) VALUE ('$nama', '$alamat', '$jk', '$agama', '$sekolah')";
-    $query = mysqli_query($db, $sql);
+    $sql = "INSERT INTO calon_siswa (nama, alamat, jenis_kelamin, agama, asal_sekolah) VALUE ('$nama', '$alamat', '$jk', '$agama', '$sekolah')";
+    $query = mysqli_query($conn, $sql);
 
     // apakah query simpan berhasil?
     if( $query ) {
         // kalau berhasil alihkan ke halaman index.php dengan status=sukses
-        header('Location: index.php?status=sukses');
+        header('Location: ../index.php?status=sukses');
     } else {
         // kalau gagal alihkan ke halaman indek.php dengan status=gagal
-        header('Location: index.php?status=gagal');
+        header('Location: ../index.php?status=gagal');
     }
 
 

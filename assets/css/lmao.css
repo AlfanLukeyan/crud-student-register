@@ -126,7 +126,11 @@ a:visited {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 10px;
+}
+
+.batal {
+  width: 100%;
 }
 
 a:hover,
