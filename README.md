@@ -24,17 +24,15 @@ Before running the project, ensure you have the following:
    git clone https://github.com/zoelabbb/crud-student-register.git
    ```
 
-2. Import the SQL file (`database.sql`) into your MySQL database.
+2. No need Import Database, because `config.php` will make Database automation.
 
-3. Configure the database connection in `config.php`.
-
-4. Start your PHP server:
+3. Start your PHP server:
 
    ```bash
    php -S localhost:8000
    ```
 
-5. Open the application in your web browser: [http://localhost:8000](http://localhost:8000)
+4. Open the application in your web browser: [http://localhost:8000](http://localhost:8000)
 
 ## Database Structure
 
